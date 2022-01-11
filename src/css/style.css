@@ -27,7 +27,7 @@ a {
 
 .container {
     width: 100%;
-    max-width: 960px;
+    max-width: 1140px;
     margin: 0 auto;
 }
 
@@ -118,4 +118,118 @@ header {
     font-size: 18px;
     font-weight: 400;
     text-align: center;
+    margin: 0 auto;
+    width: 745px;
+}   
+
+.about__contact {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 85px;
+}
+
+.about__name img,
+.about__email img,
+.about__insta img,
+.about__tel img {
+    background-color: var(--gray-400);
+    padding: 10px 10px;
+    border-radius: 30px;
+    margin-bottom: 19px;
+}
+
+.about__name h3, 
+.about__email h3, 
+.about__insta h3, 
+.about__tel h3 {
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.about__name p, 
+.about__email p, 
+.about__insta p, 
+.about__tel p {
+    color: var(--gray);
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.about__name {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.about__email {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about__insta {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about__tel {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects__title {
+    color: var(--white);
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 127px;
+}
+
+.box {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 0px 45px;
+    margin-top: 30px;
+}
+
+.box__projects {
+    margin-bottom: 32px;
+}
+
+.box__projects img {
+    margin: 20px 25px 23px 25px;
+}
+
+.box__title {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    margin-left: 25px;
+}
+
+.box__description {
+    color: var(--gray);
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    margin-left: 25px;
+}
+
+
+.box__projects {
+    width: 350px;
+    height: 240px;
+    background-color: var(--gray-400);
 }
