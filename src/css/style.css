@@ -26,7 +26,7 @@ a {
 }
 
 .container {
-    width: 100%;
+    width: 90%;
     max-width: 1140px;
     margin: 0 auto;
 }
@@ -39,7 +39,7 @@ header {
 }
 
 .logo {
-    font-size: 26px;
+    font-size: 1.16rem;
     font-weight: 700;
 }
 
@@ -52,26 +52,42 @@ header {
     list-style: none;
 }
 
-.menu__item::after {
-    border: 1;
+.menu__item a {
+    position: relative;
+}
+
+.menu__item a::after {
+    content: "";
+    position: absolute;
+    background-color: var(--green-light);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: .3s;
+}
+
+.menu__item a:hover::after {
+    width: 100%;
 }
 
 .start {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-top: 143px;
 }
 
 .start__title {
     color: var(--white);
-    font-size: 36px;
+    font-size: 2.25rem;
     font-weight: 700;
 
 }
 
 .start__description {
     color: var(--gray);
-    font-size: 18px;
+    font-size: 1.12rem;
     font-weight: 500;
     margin: 18px 0 35px 0;
 }
@@ -87,10 +103,19 @@ header {
     align-items: center;
     width: 143px;
     height: 42px;
-    font-size: 14px;
+    font-size: 0.87rem;
     font-weight: 500;
     color: var(--dark);
     background-color: var(--green-light);
+    transition: .4s;
+}
+
+.down-cv:hover {
+    background-color: transparent;
+    color: var(--green-light);
+    border: 1px solid var(--green-light);
+    transition: .4s;
+    border-radius: 50px 10px;
 }
 
 .start_contact {
@@ -99,10 +124,18 @@ header {
     align-items: center;
     width: 157px;
     height: 42px;
-    font-size: 14px;
+    font-size: 0.87rem;
     font-weight: 500;
     color: var(--white);
     border: 1px solid #333;
+    transition: .4s;
+}
+
+.start_contact:hover {
+    background-color: var(--gray-200);
+    color: var(--green-light);
+    transition: .4s;
+    border-radius: 10px 50px;
 }
 
 .about {
@@ -111,7 +144,7 @@ header {
 
 .about__title {
     color: var(--white);
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 700;
     text-align: center;
     margin-bottom: 30px;
@@ -119,11 +152,11 @@ header {
 
 .about__description {
     color: var(--gray);
-    font-size: 18px;
+    font-size: 1.12rem;
     font-weight: 400;
     text-align: center;
     margin: 0 auto;
-    width: 745px;
+    width: 65%;
 }   
 
 .about__contact {
@@ -147,7 +180,7 @@ header {
 .about__insta h3, 
 .about__tel h3 {
     color: var(--white);
-    font-size: 18px;
+    font-size: 1.12rem;
     font-weight: 700;
     text-align: center;
 }
@@ -157,7 +190,7 @@ header {
 .about__insta p, 
 .about__tel p {
     color: var(--gray);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     text-align: center;
 }
@@ -193,34 +226,32 @@ header {
 
 .projects__title {
     color: var(--white);
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 700;
     text-align: center;
     margin-top: 127px;
 }
 
 .box {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    gap: 0px 45px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px 45px;
     margin-top: 30px;
 }
 
 .box__projects {
-    width: 350px;
-    height: 240px;
+    width: 100%;
     background-color: var(--gray-400);
-    margin-bottom: 32px;
 }
 
 .box__projects img {
-    margin: 20px 25px 23px 25px;
+    width: 100%;
+    padding: 20px 25px 20px 25px;
 }
 
 .box__title {
     color: #fff;
-    font-size: 18px;
+    font-size: 1.12rem;
     font-weight: 500;
     margin-bottom: 6px;
     margin-left: 25px;
@@ -228,7 +259,7 @@ header {
 
 .box__description {
     color: var(--gray);
-    font-size: 14px;
+    font-size: 0.87rem;
     font-weight: 400;
     margin-bottom: 20px;
     margin-left: 25px;
@@ -236,23 +267,22 @@ header {
 
 .services__title {
     color: var(--white);
-    font-size: 32px;
-    font-size: 700;
+    font-size: 2rem;
+    font-weight: 700;
     text-align: center;
     margin-top: 127px;
 }
 
 .cards {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    gap: 0px 45px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px 45px;
     margin-top: 30px;
     margin-bottom: 100px;
 }
 
 .card__services {
-    width: 350px;
+    width:100%;
     height: 240px;
     background-color: var(--gray-400);
     border-bottom: 4px solid var(--green-light);
@@ -264,7 +294,7 @@ header {
 
 .card__title {
     color: var(--gray);
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 500;
     margin-left: 30px;
     width: 150px;
@@ -276,7 +306,7 @@ header {
 
 .skills__title {
     color: var(--white);
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 700;
     text-align: center;
     margin-bottom: 30px;
@@ -285,13 +315,22 @@ header {
 .skills__box {
     display: flex;
     justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
     gap: 51px;
 }
 
 .skills__img {
+    width: 12%;
     background-color: var(--gray-400);
     border: 1px solid #333;
     padding: 20px;
+    transition: .4s;
+}
+
+.skills__img:hover {
+    transform: scale(1.1);
+    transition: .4s;
 }
 
 footer {
@@ -304,7 +343,7 @@ footer {
 
 footer p {
     color: var(--white);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
 }
 
@@ -312,3 +351,18 @@ footer span {
     color: var(--green-light);
 }
 
+
+@media screen and (max-width: 768px) {
+    .start {
+        flex-wrap: nowrap;
+    }
+
+    .card__title {
+        font-size: 1.6rem;
+    }
+
+    .skills__img {
+        width: 10%;
+        padding: 10px;
+    }
+}
