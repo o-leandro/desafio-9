@@ -15,6 +15,10 @@
     --dm-sans: 'DM Sans', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--dark);
     font-family: var(--dm-sans);
@@ -74,7 +78,6 @@ header {
 .start {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     margin-top: 143px;
 }
 
@@ -82,7 +85,6 @@ header {
     color: var(--white);
     font-size: 2.25rem;
     font-weight: 700;
-
 }
 
 .start__description {
@@ -138,6 +140,10 @@ header {
     border-radius: 10px 50px;
 }
 
+.start__img img {
+    width: 100%;
+}
+
 .about {
     margin-top: 170px;
 }
@@ -160,8 +166,8 @@ header {
 }   
 
 .about__contact {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     margin-top: 85px;
 }
 
@@ -274,15 +280,15 @@ header {
 }
 
 .cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px 45px;
-    margin-top: 30px;
-    margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 45px;
+    margin: 30px 0;
 }
 
 .card__services {
-    width:100%;
+    width: 30%;
     height: 240px;
     background-color: var(--gray-400);
     border-bottom: 4px solid var(--green-light);
@@ -315,13 +321,14 @@ header {
 .skills__box {
     display: flex;
     justify-content: space-between;
-    align-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 51px;
+    gap: 10px;
 }
 
 .skills__img {
-    width: 12%;
+    width: 130px;
+    height: 130px;
     background-color: var(--gray-400);
     border: 1px solid #333;
     padding: 20px;
@@ -351,18 +358,158 @@ footer span {
     color: var(--green-light);
 }
 
+@media (max-width: 922px) {
+    .skills__img {
+        width: 100px;
+        height: 100px;
+    }
+}
 
-@media screen and (max-width: 768px) {
-    .start {
-        flex-wrap: nowrap;
+@media (max-width: 768px) {
+    .box {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .card__services {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .card__services img {
+        padding: 0;
     }
 
     .card__title {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .skills {
+        margin-bottom: 50px;
+    }
+
+    .skills__box {
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+        align-content: space-around;
+        gap: 20px;
     }
 
     .skills__img {
-        width: 10%;
-        padding: 10px;
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 600px) {
+    .menu {
+        display: none;
+    } 
+
+    .cards {
+        gap: 20px;
+    }
+
+    .card__title{
+        font-size: 1.3rem;
+        width: 100%;
+    }
+}
+
+@media (max-width: 425px) {
+    .menu {
+        display: none;
+    }
+
+    .start {
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .start__title {
+        text-align: center;
+    }
+
+    .start__description {
+        text-align: center;
+    }
+
+    .content-btn {
+        justify-content: space-around;
+        margin-bottom: 50px;
+    }
+
+    .start__img img {
+        width: 80%;
+    }
+
+    .start__img {
+        text-align: center;
+    }
+
+    .about {
+        margin-top: 50px;
+    }
+
+    .about__description {
+        width: 100%;
+    }
+
+    .about__contact {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .projects__title {
+        margin-top: 50px;
+    }
+
+    .box {
+        grid-template-columns: 1fr;
+    }
+
+    .services__title {
+        margin-top: 50px;
+    }
+
+    .cards {
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .card__services {
+        width: 40%;
+    }
+
+    .card__title {
+        font-size: 1.2rem;
+        width: 100%;
+    }
+
+    .skills__title {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 320px) {
+    .card__title {
+        font-size: 1.2rem;
+    }
+
+    .about__contact {
+        grid-template-columns: 1fr;
+    }
+
+    .skills__box {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+
+    footer p {
+        font-size: 0.9rem;
     }
 }
