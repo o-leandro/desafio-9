@@ -1,6 +1,15 @@
-<h1>DESAFIO 9 - Portfólio do Iuri Silva</h1>
-<p>Desafio da Comunidade Codelândia.</p>
-<a href="https://www.figma.com/file/Yb9IBH56g7T1hdIyZ3BMNO/Desafios---Codel%C3%A2ndia?node-id=13190%3A2">Link do layout do projeto</a>
-<br>
-<br>
-<img src="src/img/desafio-9-codelandia.gif">
+# :computer: Sobre o projeto
+Desenvolvimento do layout do desafio 19 - Rachi da Comunidade Codelândia (Iuri Silva).
+
+&nbsp;
+[Link do desafio no figma](https://www.figma.com/file/Yb9IBH56g7T1hdIyZ3BMNO/Desafios---Codel%C3%A2ndia?node-id=13190%3A2)
+
+---
+
+##  :gear: Tecnologias
+* HTML5
+* CSS3
+---
+
+&nbsp;
+![Desafio - 9](src/img/desafio-9-codelandia.gif)
